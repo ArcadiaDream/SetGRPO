@@ -17,6 +17,11 @@
 </p>
 
 <p align="center">
+  <b>Official Implementation</b>: a set-valued framework for rubric-based GRPO that calibrates grader-induced
+  coefficient shifts into a joint uncertainty set with risk-controlled updates.
+</p>
+
+<p align="center">
   <a href="https://arxiv.org/abs/2610.36807"><img src="https://img.shields.io/badge/arXiv-2610.36807-b31b1b.svg" alt="arXiv"></a>
   <a href="https://arcadiadream.github.io/SetGRPO.github.io/"><img src="https://img.shields.io/badge/Project-Page-orange.svg" alt="Project Page"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python"></a>
@@ -28,12 +33,6 @@
 </p>
 
 ---
-
-<p align="center">
-  <b>Official Implementation</b>: A set-valued framework for rubric-based GRPO that models grader-induced
-  coefficient shifts as a joint uncertainty set, recovers geometry-safe updates under the current policy, and gates
-  response groups with finite-sample direction-reversal risk control.
-</p>
 
 ## 📌 Introduction
 
