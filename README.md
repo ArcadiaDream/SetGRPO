@@ -13,9 +13,8 @@
   Jinhe Bi<sup>2</sup> &nbsp;·&nbsp;
   Yupeng Hu<sup>1,*</sup>
 </p>
-
 <p align="center">
-  <sup>1</sup>Affiliation of authors 1–4 and 6 &nbsp;&nbsp; <sup>2</sup>Affiliation of author 5<br>
+  <sup>1</sup>Shandong University &nbsp;&nbsp; <sup>2</sup>National University of Singapore<br>
   <sup>†</sup>Project Leader &nbsp;&nbsp; <sup>*</sup>Corresponding Author
 </p>
 
@@ -25,7 +24,9 @@
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green.svg" alt="License"></a>
-  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/SetGRPO-v2.svg?style=social" alt="Stars"></a>
+  <!-- Stars 徽章：定稿公开后换成最终仓库地址再启用
+  <a href="https://github.com/ArcadiaDream/REPO/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/REPO.svg?style=social" alt="Stars"></a>
+  -->
 </p>
 
 ---
