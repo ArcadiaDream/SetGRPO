@@ -1,5 +1,9 @@
 <a id="top" name="top"></a>
 
+<p align="center">
+  <img src="assets/logo.png" width="620" alt="SetGRPO logo">
+</p>
+
 <h1 align="center">SetGRPO: Calibrating Grader-Induced Policy Optimization</h1>
 
 <p align="center">
