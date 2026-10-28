@@ -429,3 +429,17 @@ We welcome all forms of contributions! If you have any questions, ideas, or find
 Apache-2.0. See [LICENSE](LICENSE).
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
+<p align="center">
+  <img src="assets/wave.gif" alt="divider" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ArcadiaDream/SetGRPO-v2"><img src="https://img.shields.io/badge/%E2%AD%90_Star_US-000000?style=for-the-badge&logo=github&logoColor=00D9FF" alt="Star"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/issues"><img src="https://img.shields.io/badge/%F0%9F%90%9B_Report_Issues-000000?style=for-the-badge&logo=github&logoColor=FF6B6B" alt="Issues"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/pulls"><img src="https://img.shields.io/badge/%F0%9F%A7%90_Pull_Requests-000000?style=for-the-badge&logo=github&logoColor=4ECDC4" alt="Pull Requests"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ArcadiaDream/SetGRPO-v2"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=520&lines=Thank+you+for+visiting+SetGRPO!;Looking+forward+to+your+attention!" alt="SetGRPO"></a>
+</p>
+
