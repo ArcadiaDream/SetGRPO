@@ -1,18 +1,14 @@
 <h1 align="center">SetGRPO: Calibrating Grader-Induced Policy Optimization</h1>
 
 <p align="center">
-  <b>Official implementation of Set-Valued Group Relative Policy Optimization</b>
+  <a href="https://arcadiadream.github.io/HJL.github.io/">Jiale Huang</a><sup>1</sup> &nbsp;·&nbsp;
+  <a href="https://lee-zixu.github.io/">Zixu Li</a><sup>1,†</sup> &nbsp;·&nbsp;
+  <a href="https://zivchen-ty.github.io/">Zhiwei Chen</a><sup>1</sup> &nbsp;·&nbsp;
+  <a href="https://zhihfu.github.io/">Zhiheng Fu</a><sup>1</sup> &nbsp;·&nbsp;
+  <a href="https://jinhe-bi.github.io/">Jinhe Bi</a><sup>2</sup> &nbsp;·&nbsp;
+  <a href="https://faculty.sdu.edu.cn/huyupeng1/zh_CN/index.htm">Yupeng Hu</a><sup>1,*</sup>
 </p>
 
-<p align="center">
-  <!-- TODO: 补齐作者个人主页链接 -->
-  Jiale Huang<sup>1</sup> &nbsp;·&nbsp;
-  Zixu Li<sup>1,†</sup> &nbsp;·&nbsp;
-  Zhiwei Chen<sup>1</sup> &nbsp;·&nbsp;
-  Zhiheng Fu<sup>1</sup> &nbsp;·&nbsp;
-  Jinhe Bi<sup>2</sup> &nbsp;·&nbsp;
-  Yupeng Hu<sup>1,*</sup>
-</p>
 <p align="center">
   <sup>1</sup>Shandong University &nbsp;&nbsp; <sup>2</sup>National University of Singapore<br>
   <sup>†</sup>Project Leader &nbsp;&nbsp; <sup>*</sup>Corresponding Author
@@ -302,3 +298,12 @@ We welcome all forms of contributions. If you have a question, an idea, or find 
 ## 📄 License
 
 Apache-2.0. See [LICENSE](LICENSE).
+
+---
+
+<p align="center">
+  <b>Official Implementation</b>: A set-valued framework for rubric-based GRPO that models grader-induced
+  coefficient shifts as a joint uncertainty set, recovers geometry-safe updates under the current policy, and gates
+  response groups with finite-sample direction-reversal risk control.
+</p>
+
