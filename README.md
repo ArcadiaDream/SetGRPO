@@ -391,27 +391,112 @@ paper 🥰. Your support is our greatest motivation!
 
 ## 🔗 Related Projects
 
-*Ecosystem & Other Works from our Team*
+*Other works from our team:*
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <a href="https://arxiv.org/abs/2606.08144"><img src="assets/proj-imagine.png" width="100%"></a><br>
-      <b>IMAGINE (ICMR'26)</b><br>
-      <a href="https://arxiv.org/abs/2606.08144">Paper</a>
+<table style="width:100%; border:none; text-align:center; background-color:transparent;">
+  <tr style="border:none;">
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/tema-logo.png" alt="TEMA" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>TEMA (ACL'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://arxiv.org/abs/2604.21806" target="_blank">Paper</a> |
+        <a href="https://lee-zixu.github.io/TEMA.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/iLearn-Lab/ACL26-TEMA" target="_blank">Code</a>
+      </span>
     </td>
-    <td align="center" width="33%">
-      <a href="https://arxiv.org/abs/2606.11689"><img src="assets/proj-rankvr.png" width="100%"></a><br>
-      <b>RankVR (ICMR'26)</b><br>
-      <a href="https://arxiv.org/abs/2606.11689">Paper</a>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/consep-logo.png" alt="ConeSep" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>ConeSep (CVPR'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://arxiv.org/abs/2604.20358" target="_blank">Paper</a> |
+        <a href="https://lee-zixu.github.io/ConeSep.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/iLearn-Lab/CVPR26-ConeSep" target="_blank">Code</a>
+      </span>
     </td>
-    <td align="center" width="33%">
-      <a href="https://arxiv.org/abs/2604.18051"><img src="assets/proj-intent.png" width="100%"></a><br>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/airknow-logo.png" alt="Air-Know" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>Air-Know (CVPR'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://arxiv.org/abs/2604.19386" target="_blank">Paper</a> |
+        <a href="https://zhihfu.github.io/Air-Know.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/ZhihFu/Air-Know" target="_blank">Code</a>
+      </span>
+    </td>
+  </tr>
+  <tr style="border:none;">
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/habit-logo.png" alt="HABIT" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>HABIT (AAAI'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37608" target="_blank">Paper</a> |
+        <a href="https://lee-zixu.github.io/HABIT.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/iLearn-Lab/AAAI26-HABIT" target="_blank">Code</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/retrack-logo.png" alt="ReTrack" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>ReTrack (AAAI'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/39507" target="_blank">Paper</a> |
+        <a href="https://lee-zixu.github.io/ReTrack.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/iLearn-Lab/AAAI26-ReTrack" target="_blank">Code</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/intent-logo.png" alt="INTENT" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
       <b>INTENT (AAAI'26)</b><br>
-      <a href="https://arxiv.org/abs/2604.18051">Paper</a> |
-      <a href="https://zivchen-ty.github.io/INTENT.github.io/">Project</a> |
-      <a href="https://github.com/iLearn-Lab/AAAI26-INTENT">Code</a>
+      <span style="font-size: 0.9em;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/39181" target="_blank">Paper</a> |
+        <a href="https://zivchen-ty.github.io/INTENT.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/ZivChen-Ty/INTENT" target="_blank">Code</a>
+      </span>
     </td>
+  </tr>
+  <tr style="border:none;">
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/hud-logo.png" alt="HUD" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>HUD (ACM MM'25)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://dl.acm.org/doi/10.1145/3746027.3755445" target="_blank">Paper</a> |
+        <a href="https://zivchen-ty.github.io/HUD.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/ZivChen-Ty/HUD" target="_blank">Code</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/offset-logo.png" alt="OFFSET" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>OFFSET (ACM MM'25)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://dl.acm.org/doi/10.1145/3746027.3755366" target="_blank">Paper</a> |
+        <a href="https://zivchen-ty.github.io/OFFSET.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/ZivChen-Ty/OFFSET" target="_blank">Code</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/logos/encoder-logo.png" alt="ENCODER" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>ENCODER (AAAI'25)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32541" target="_blank">Paper</a> |
+        <a href="https://sdu-l.github.io/ENCODER.github.io/" target="_blank">Project</a> |
+        <a href="https://github.com/Lee-zixu/ENCODER" target="_blank">Code</a>
+      </span>
+    </td>
+  </tr>
+  <tr style="border:none;">
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/proj-imagine.png" alt="IMAGINE" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>IMAGINE (ICMR'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://arxiv.org/abs/2606.08144" target="_blank">Paper</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
+      <img src="assets/proj-rankvr.png" alt="RankVR" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
+      <b>RankVR (ICMR'26)</b><br>
+      <span style="font-size: 0.9em;">
+        <a href="https://arxiv.org/abs/2606.11689" target="_blank">Paper</a>
+      </span>
+    </td>
+    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;"></td>
   </tr>
 </table>
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
