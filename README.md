@@ -50,7 +50,13 @@
 - [📂 Repository Structure](#-repository-structure)
 - [🚀 Installation](#-installation)
 - [📂 Data Preparation](#-data-preparation)
+  - [Training prompts with rubrics](#training-prompts-with-rubrics)
+  - [A grading endpoint](#a-grading-endpoint)
+  - [A local model checkpoint](#a-local-model-checkpoint)
 - [🏃 Quick Start](#-quick-start)
+  - [1. Training the model](#1-training-the-model)
+  - [2. Run the offline certificate](#2-run-the-offline-certificate)
+  - [3. Freeze a calibration rule](#3-freeze-a-calibration-rule)
 - [📦 What Is Not Shipped](#-what-is-not-shipped)
 - [🤝 Acknowledgements](#-acknowledgements)
 - [✉️ Contact](#️-contact)
@@ -282,18 +288,18 @@ The command ships with `--calibration`, `--risk`, `--output`, and the risk param
 This repository does not redistribute any dataset. A training run needs three inputs from the caller, and each one
 has a fixed place in the recipe.
 
-**Training prompts with rubrics**
+### Training prompts with rubrics
 
 A parquet file following the Verl RLHF dataset layout. It carries the prompt field consumed by `data.train_files` and
 the rubric text read by the batched reward function. The paper trains on the RubricHub training set; arrange your own
 copy in the same schema.
 
-**A grading endpoint**
+### A grading endpoint
 
 Either an OpenAI-compatible external API or a locally served judge. The wrapper reads `STAGE2_API_BASE_URL`,
 `STAGE2_API_MODEL`, and `STAGE2_API_KEY` from the environment and stores no credentials.
 
-**A local model checkpoint**
+### A local model checkpoint
 
 Passed as `actor_rollout_ref.model.path`, in the standard Hugging Face layout.
 
@@ -313,7 +319,7 @@ SetGRPO/
 
 ## 🏃 Quick Start
 
-**1. Training the model**
+### 1. Training the model
 
 Train SetGRPO on your own prompts and checkpoint using the DAPO entrypoint.
 
@@ -329,7 +335,7 @@ python -m recipe.dapo.main_dapo \
   trainer.n_gpus_per_node=4 trainer.nnodes=1
 ```
 
-**2. Run the offline certificate**
+### 2. Run the offline certificate
 
 Two shipped scripts exercise the calibration and recovery APIs on synthetic scores.
 
@@ -338,7 +344,7 @@ python examples/offline_certificate.py
 python examples/online_update.py
 ```
 
-**3. Freeze a calibration rule**
+### 3. Freeze a calibration rule
 
 Freeze the joint coefficient set and the risk-gated threshold into a JSON rule for deployment.
 
