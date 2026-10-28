@@ -110,20 +110,14 @@ to keep the policy update direction safe:
 
 ## 📊 Experiment Results
 
-Same-backbone comparison against RubricHub on Qwen3-4B and Qwen3-14B. Medical: HB = HealthBench, LEM = LLMEval-Med,
-MQA = MedQA, MCQA = MedMCQA. Writing: WB = WritingBench, CW = Creative Writing v3. Instruction Following:
-IFE = IFEval, IFB = IFBench, IB = InfoBench, MIF = MulDimIF.
-
-| Backbone | Method | HB | LEM | MQA | MCQA | WB | CW | IFE | IFB | IB | MIF | Macro Avg. |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Qwen3-4B | RubricHub | 64.34 | 45.12 | 78.38 | 61.88 | 66.51 | 28.47 | 64.21 | 24.08 | 80.21 | 47.35 | 56.06 |
-| Qwen3-4B | **SetGRPO** | 66.82 | 47.57 | 77.91 | 61.42 | 68.97 | 30.18 | 66.83 | 26.49 | 79.66 | 49.72 | **57.56** |
-| Qwen3-14B | RubricHub | 68.44 | 53.36 | 77.53 | 64.76 | 70.42 | 32.71 | 69.74 | 25.61 | 82.88 | 46.79 | 59.12 |
-| Qwen3-14B | **SetGRPO** | 70.91 | 54.88 | 76.94 | 64.18 | 72.83 | 34.62 | 72.21 | 27.94 | 82.17 | 49.18 | **60.59** |
-
-Risk calibration at the selected threshold `τ_sel = 0.25`: the one-sided Clopper–Pearson upper bound stays below
-`β = 0.08`, with empirical conditional risk **0.0548** on Qwen3-4B and **0.0554** on Qwen3-14B. Full tables, the
-risk-calibration curves, and the ablation study are reported in the paper.
+<p align="center">
+  <img src="assets/results-main.png" alt="Main results on ten open-ended benchmarks" width="100%">
+</p>
+<p align="center">
+  <b>Table 1.</b> Same-backbone comparison against RubricHub on Qwen3-4B and Qwen3-14B, across ten open-ended
+  benchmarks spanning medical, writing, and instruction-following tasks. Bold marks the better score within each
+  backbone and metric.
+</p>
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📑 Table of Contents
