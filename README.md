@@ -88,6 +88,8 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 
 ## 📢 News
 
+Paper first, code second — the release notes below are in reverse chronological order.
+
 - **[2026-10-29]** Training code, preflight tooling, and the Verl/FSDP recipe are public in this repository.
 - **[2026-10-27]** Paper released on arXiv: [2610.36807](https://arxiv.org/abs/2610.36807).
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
@@ -110,6 +112,10 @@ to keep the policy update direction safe:
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🏗️ Architecture
+
+The three modules run in sequence on every training step: the coefficient set is calibrated from paired grader scores,
+each candidate is projected onto the current policy's update geometry, and only the groups that pass the risk gate
+contribute to the GRPO objective.
 
 <p align="center">
   <img src="assets/framework.png" alt="Overview of SetGRPO" width="95%">
@@ -202,31 +208,49 @@ the overhead buys a 4.75-point macro-average gain over GRPO at the same budget.
 
 ## 📂 Repository Structure
 
+Everything not marked `[third-party]` is first-party code. The tree is split by how much of the runtime you need:
+`[core]` depends only on NumPy and SciPy, `[train]` pulls in PyTorch and Verl, and `[tool]` is standalone scripting
+that talks to an external judge. Most readers only ever touch `setgrpo/`.
+
+| Tag | Meaning | Extra dependencies |
+| --- | --- | --- |
+| `[core]` | Numerical implementation of the three modules | NumPy, SciPy |
+| `[train]` | Ray/FSDP training stack used for the paper | PyTorch, Verl |
+| `[tool]` | Diagnostics and side services | none beyond the core |
+| `[third-party]` | Vendored upstream code | follows the training stack |
+
 ```
 SetGRPO/
-├── assets/                  # figures referenced by this README
-├── setgrpo/                 # framework-independent numerical core
-│   ├── calibration.py       # group normalization, coefficient sets, conformal radii
-│   ├── geometry.py          # local policy geometry, projected response Jacobians
-│   ├── recovery.py          # support margins, safe anchors, geometry-guided recovery
-│   ├── risk.py              # selective risk calibration and threshold selection
-│   ├── online.py            # framework-neutral online GRPO update construction
-│   ├── warmup.py            # paired-score calibration, frozen artifacts
-│   ├── certificate.py       # deploy-time certificates
-│   ├── training.py          # minimal tensor-batch adapter
-│   └── data.py              # JSON-friendly certificate row helpers
-├── setgrpo_preflight/       # startup / pre-training checks and diagnostics
-├── setgrpo_sidecar/         # policy-Jacobian service
-├── recipe/dapo/             # paper training entrypoint (Ray + FSDP + Verl)
-├── verl/                    # vendored Verl runtime
-├── eval/                    # external-judge API client
-├── health_bench/            # batched reward function used in the paper
-├── examples/                # synthetic offline / online walkthroughs
-└── tests/                   # core unit tests
+├── assets/                       # figures referenced by this README
+├── setgrpo/                      # [core] framework-independent numerical core
+│   ├── calibration.py            # group normalization, coefficient sets, conformal radii
+│   ├── geometry.py               # local policy geometry, projected response Jacobians
+│   ├── recovery.py               # support margins, safe anchors, geometry-guided recovery
+│   ├── risk.py                   # selective risk calibration and threshold selection
+│   ├── online.py                 # framework-neutral online GRPO update construction
+│   ├── warmup.py                 # paired-score calibration, frozen artifacts
+│   ├── certificate.py            # deploy-time certificates
+│   ├── training.py               # minimal tensor-batch adapter
+│   └── data.py                   # JSON-friendly certificate row helpers
+├── setgrpo_preflight/            # [tool] startup / pre-training checks and diagnostics
+├── setgrpo_sidecar/              # [tool] policy-Jacobian service
+├── scripts/                      # [tool] endpoint checks run before a training job
+├── recipe/dapo/                  # [train] paper training entrypoint (Ray + FSDP + Verl)
+├── verl/                         # [third-party] vendored Verl runtime
+├── eval/                         # [train] external-judge API client
+├── health_bench/                 # [train] batched reward function used in the paper
+├── examples/                     # synthetic offline / online walkthroughs
+└── tests/                        # core unit tests
 ```
+
+Two entry points matter in practice: `setgrpo/` if you want to call the calibration and recovery API from your own
+trainer, and `recipe/dapo/` if you want to reproduce the paper. The rest exists to keep those two honest.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🚀 Installation
+
+The package installs in stages, so you only pull the dependency set you actually need. The core is pure NumPy and
+SciPy, which keeps a calibration-only workflow installable on a laptop.
 
 ```bash
 git clone https://github.com/ArcadiaDream/SetGRPO-v2.git
@@ -271,6 +295,9 @@ SetGRPO/
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🏃 Quick Start
+
+Three levels of entry, from a single function call to a full training run: a synthetic certificate you can run in
+one file, two executable examples, and the Ray/FSDP recipe used for the paper.
 
 ### Minimal offline certificate
 
@@ -348,6 +375,8 @@ Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDre
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📝 Citation
+
+If SetGRPO helps your work, please cite the arXiv version below.
 
 ```bibtex
 @misc{huang2026setgrpo,
