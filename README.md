@@ -366,6 +366,8 @@ conformal prediction and conformal risk control for the statistical guarantees.
 ## ✉️ Contact
 
 Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDream/SetGRPO-v2/issues).
+
+For anything that does not fit a public thread, reach the first author at **huangjiale.cs@outlook.com**.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📝 Citation
