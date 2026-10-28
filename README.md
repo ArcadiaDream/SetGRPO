@@ -5,12 +5,13 @@
 </p>
 
 <p align="center">
-  <a href="https://arcadiadream.github.io/HJL.github.io/">Jiale Huang</a><sup>1</sup> &nbsp;·&nbsp;
-  <a href="https://lee-zixu.github.io/">Zixu Li</a><sup>1,†</sup> &nbsp;·&nbsp;
-  <a href="https://zivchen-ty.github.io/">Zhiwei Chen</a><sup>1</sup> &nbsp;·&nbsp;
-  <a href="https://zhihfu.github.io/">Zhiheng Fu</a><sup>1</sup> &nbsp;·&nbsp;
+  <!-- TODO: 补齐作者个人主页链接 -->
+  Jiale Huang<sup>1</sup> &nbsp;·&nbsp;
+  Zixu Li<sup>1,†</sup> &nbsp;·&nbsp;
+  Zhiwei Chen<sup>1</sup> &nbsp;·&nbsp;
+  Zhiheng Fu<sup>1</sup> &nbsp;·&nbsp;
   Jinhe Bi<sup>2</sup> &nbsp;·&nbsp;
-  <a href="https://faculty.sdu.edu.cn/huyupeng1/zh_CN/index.htm">Yupeng Hu</a><sup>1,*</sup>
+  Yupeng Hu<sup>1,*</sup>
 </p>
 
 <p align="center">
@@ -286,15 +287,9 @@ If you find this code useful, a ⭐ on the repository is appreciated.
 
 ## 🔗 Related Projects
 
-Other works from our group:
+<!-- TODO: 补齐与 SetGRPO 相关的其他工作。此前的列表自其他项目仓库沿用，与本研究无关，已移除。 -->
 
-- [TEMA (ACL'26)](https://github.com/Lee-zixu/ACL26-TEMA) — anchor the image, follow the text for multi-modification composed image retrieval.
-- [ConeSep (CVPR'26)](https://github.com/Lee-zixu/ConeSep) — cone-based robust noise-unlearning compositional network.
-- [Air-Know (CVPR'26)](https://github.com/ZhihFu/Air-Know) — arbiter-calibrated knowledge-internalizing robust network.
-- [INTENT (AAAI'26)](https://github.com/ZivChen-Ty/INTENT) — invariance and discrimination-aware noise mitigation.
-- [HABIT (AAAI'26)](https://github.com/Lee-zixu/HABIT) — chrono-synergia robust progressive learning framework.
-- [OFFSET (ACM MM'25)](https://github.com/ZivChen-Ty/OFFSET) — segmentation-based focus shift revision.
-- [ENCODER (AAAI'25)](https://github.com/Lee-zixu/ENCODER) — composed image retrieval benchmark suite.
+_待补充。_
 
 ## 🫡 Support & Contributing
 
