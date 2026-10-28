@@ -391,11 +391,34 @@ paper 🥰. Your support is our greatest motivation!
 
 ## 🔗 Related Projects
 
+*Ecosystem & Other Works from our Team*
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://arxiv.org/abs/2606.08144"><img src="assets/proj-imagine.png" width="100%"></a><br>
+      <b>IMAGINE (ICMR'26)</b><br>
+      <a href="https://arxiv.org/abs/2606.08144">Paper</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://arxiv.org/abs/2606.11689"><img src="assets/proj-rankvr.png" width="100%"></a><br>
+      <b>RankVR (ICMR'26)</b><br>
+      <a href="https://arxiv.org/abs/2606.11689">Paper</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://arxiv.org/abs/2604.18051"><img src="assets/proj-intent.png" width="100%"></a><br>
+      <b>INTENT (AAAI'26)</b><br>
+      <a href="https://arxiv.org/abs/2604.18051">Paper</a> |
+      <a href="https://zivchen-ty.github.io/INTENT.github.io/">Project</a> |
+      <a href="https://github.com/iLearn-Lab/AAAI26-INTENT">Code</a>
+    </td>
+  </tr>
+</table>
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🫡 Support & Contributing
 
-We welcome all forms of contributions. If you have a question, an idea, or find a bug:
+We welcome all forms of contributions! If you have any questions, ideas, or find a bug, please feel free to:
 
 - Open an [Issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) for discussions or bug reports.
 - Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO-v2/pulls) to improve the codebase.
