@@ -366,9 +366,8 @@ redistributed under the Apache License 2.0; see [`verl/NOTICE.md`](verl/NOTICE.m
 
 ## ✉️ Contact
 
-Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDream/SetGRPO-v2/issues).
-
-For anything that does not fit a public thread, reach the first author at **huangjiale.cs@outlook.com**.
+If you have any questions, feel free to open an [issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) or reach out
+to us at **lizixu.cs@gmail.com** ☺️
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📝 Citation
