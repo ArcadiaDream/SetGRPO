@@ -1,3 +1,5 @@
+<a id="top" name="top"></a>
+
 <h1 align="center">SetGRPO: Calibrating Grader-Induced Policy Optimization</h1>
 
 <p align="center">
@@ -27,10 +29,16 @@
 
 ---
 
+<p align="center">
+  <b>Official Implementation</b>: A set-valued framework for rubric-based GRPO that models grader-induced
+  coefficient shifts as a joint uncertainty set, recovers geometry-safe updates under the current policy, and gates
+  response groups with finite-sample direction-reversal risk control.
+</p>
+
 ## 📌 Introduction
 
 Rubric-based reinforcement learning trains large language models on open-ended tasks through fine-grained grader
-feedback, but the grader itself is stochastic. Because GRPO normalizes rewards **within each response group** and then
+feedback, but the grader itself is stochastic. Because GRPO normalizes rewards within each response group and then
 combines the resulting training coefficients with response-level gradients, a single scoring discrepancy can shift the
 coefficients of the entire group, and the same coefficient shift can produce a different update direction under a
 different policy snapshot. Score discrepancies alone therefore do not describe what the optimizer actually does.
@@ -52,11 +60,13 @@ highest macro average among all compared training methods on both the Qwen3.5 an
   <b>Figure 1.</b> (a) Score disagreement propagates jointly through within-group normalization.
   (b) Policy geometry changes local update alignment.
 </p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📢 News
 
 - **[2026-10-27]** Paper released on arXiv: [2610.36807](https://arxiv.org/abs/2610.36807).
 - **[2026-10-17]** Training code, preflight tooling, and the Verl/FSDP recipe are public in this repository.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## ✨ Key Features
 
@@ -70,6 +80,7 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 - 🏆 **Consistent gains across backbones** — same-backbone comparison against RubricHub gives **57.56** macro average on
   Qwen3-4B (+1.50) and **60.59** on Qwen3-14B (+1.47), with the joint set and the threshold calibrated separately per
   backbone.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🏗️ Architecture
 
@@ -88,6 +99,7 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 3. **Gate.** A one-sided Clopper–Pearson bound over candidate thresholds yields a single global threshold
    (`τ_sel = 0.25` in the paper), targeting `β = 0.08` direction-reversal risk.
 4. **Optimize.** Only groups that pass the gate contribute their recovered coefficients to the original GRPO objective.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📊 Experiment Results
 
@@ -105,6 +117,7 @@ IFE = IFEval, IFB = IFBench, IB = InfoBench, MIF = MulDimIF.
 Risk calibration at the selected threshold `τ_sel = 0.25`: the one-sided Clopper–Pearson upper bound stays below
 `β = 0.08`, with empirical conditional risk **0.0548** on Qwen3-4B and **0.0554** on Qwen3-14B. Full tables, the
 risk-calibration curves, and the ablation study are reported in the paper.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📑 Table of Contents
 
@@ -124,6 +137,7 @@ risk-calibration curves, and the ablation study are reported in the paper.
 - [🔗 Related Projects](#-related-projects)
 - [🫡 Support & Contributing](#-support--contributing)
 - [📄 License](#-license)
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📂 Repository Structure
 
@@ -149,6 +163,7 @@ SetGRPO/
 ├── examples/                # synthetic offline / online walkthroughs
 └── tests/                   # core unit tests
 ```
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🚀 Installation
 
@@ -165,6 +180,7 @@ pip install -e '.[verl]'          # full paper training runtime
 
 The core needs Python 3.10+, NumPy and SciPy. PyTorch is optional and only required for projected policy-Jacobian
 extraction or tensor-batch attachment.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📂 Data Preparation
 
@@ -191,6 +207,7 @@ SetGRPO/
     ├── train.parquet                 # prompts + rubrics
     └── <model>/                      # local checkpoint
 ```
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🏃 Quick Start
 
@@ -250,20 +267,24 @@ bash recipe/dapo/run_setgrpo_rubrichub_external_api.sh
 ```
 
 See [`recipe/dapo/README.md`](recipe/dapo/README.md) for the full runtime requirements.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📦 What Is Not Shipped
 
 This repository does not include model weights, private datasets, API keys, checkpoints, or a cluster-specific
 launcher. Training requires a caller-provided model, a parquet dataset, and grader credentials.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🤝 Acknowledgements
 
 This implementation builds on [Verl](https://github.com/volcengine/verl) for the Ray/FSDP training runtime, and on
 conformal prediction and conformal risk control for the statistical guarantees.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## ✉️ Contact
 
 Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDream/SetGRPO-v2/issues).
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📝 Citation
 
@@ -281,12 +302,14 @@ Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDre
 ```
 
 If you find this code useful, a ⭐ on the repository is appreciated.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🔗 Related Projects
 
 <!-- TODO: 补齐与 SetGRPO 相关的其他工作。此前的列表自其他项目仓库沿用，与本研究无关，已移除。 -->
 
 _待补充。_
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 🫡 Support & Contributing
 
@@ -294,16 +317,10 @@ We welcome all forms of contributions. If you have a question, an idea, or find 
 
 - Open an [Issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) for discussions or bug reports.
 - Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO-v2/pulls) to improve the codebase.
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 ## 📄 License
 
 Apache-2.0. See [LICENSE](LICENSE).
-
----
-
-<p align="center">
-  <b>Official Implementation</b>: A set-valued framework for rubric-based GRPO that models grader-induced
-  coefficient shifts as a joint uncertainty set, recovers geometry-safe updates under the current policy, and gates
-  response groups with finite-sample direction-reversal risk control.
-</p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
