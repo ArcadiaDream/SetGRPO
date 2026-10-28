@@ -370,9 +370,10 @@ If you have any questions, feel free to open an [issue](https://github.com/Arcad
 to us at **lizixu.cs@gmail.com** ☺️
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
-## 📝 Citation
+## 📝 ⭐ Citation
 
-If SetGRPO helps your work, please cite the arXiv version below.
+If you find our work or this code useful in your research, please consider leaving a **Star** ⭐ or **Citing** 📝 our
+paper 🥰. Your support is our greatest motivation!
 
 ```bibtex
 @misc{huang2026setgrpo,
@@ -386,8 +387,6 @@ If SetGRPO helps your work, please cite the arXiv version below.
   url           = {https://arxiv.org/abs/2610.36807}
 }
 ```
-
-If you find this code useful, a ⭐ on the repository is appreciated.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🔗 Related Projects
