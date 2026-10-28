@@ -125,6 +125,43 @@ Macro Avg. only aggregates the ten benchmarks and never enters training.
   <img src="assets/table2-same-backbone.png" alt="Table 2: same-backbone comparison between RubricHub and SetGRPO" width="100%">
 </p>
 
+### Training dynamics
+
+Reward rises steadily and saturates, while policy entropy declines without an abrupt collapse. The accepted-group
+ratio stays non-zero after screening, and the mean recovery ratio over accepted groups holds around 76%–80%, so the
+retained updates keep contributing to optimization.
+
+<p align="center">
+  <img src="assets/fig3-training-dynamics.png" alt="Figure 3: training dynamics of SetGRPO" width="100%">
+</p>
+
+### Risk calibration
+
+Empirical direction-reversal risk and its one-sided Clopper–Pearson upper bound both decrease as the projection
+threshold tightens. At the selected threshold the upper bound stays below the target `β = 0.08`.
+
+<p align="center">
+  <img src="assets/fig4-risk-calibration.png" alt="Figure 4: risk calibration across candidate thresholds" width="72%">
+</p>
+
+### Ablation
+
+Every variant trails the full setting on Qwen3.5-4B. A matched random discard, which keeps the same number of groups,
+falls furthest behind — the gain comes from geometry-based screening rather than from issuing fewer updates.
+
+<p align="center">
+  <img src="assets/table5-ablation.png" alt="Table 5: ablation study of SetGRPO on Qwen3.5-4B" width="100%">
+</p>
+
+### Efficiency
+
+The additional cost is a Jacobian pass plus a per-group recovery search. Rollout and grader time are unchanged, and
+the overhead buys a 4.75-point macro-average gain over GRPO at the same budget.
+
+<p align="center">
+  <img src="assets/table6-efficiency.png" alt="Table 6: efficiency comparison between GRPO and SetGRPO" width="100%">
+</p>
+
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📑 Table of Contents
