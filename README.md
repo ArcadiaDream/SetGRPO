@@ -313,43 +313,9 @@ SetGRPO/
 
 ## 🏃 Quick Start
 
-Three levels of entry, from a single function call to a full training run: a synthetic certificate you can run in
-one file, two executable examples, and the Ray/FSDP recipe used for the paper.
+**1. Training the model**
 
-### Minimal offline certificate
-
-```python
-import numpy as np
-from setgrpo.calibration import CoefficientSet, joint_coefficients, split_conformal_radius
-from setgrpo.geometry import LocalPolicyGeometry
-from setgrpo.recovery import GeometryGuidedSafeRecovery
-
-estimated = joint_coefficients([0.2, 0.7, 0.4, 0.1])
-shape = np.eye(4) * 0.05
-radius = split_conformal_radius([1.1, 0.8, 1.4, 0.9], alpha=0.1)
-coefficient_set = CoefficientSet(estimated, shape, radius)
-
-geometry = LocalPolicyGeometry(
-    response_jacobian=np.eye(4),
-    projection=np.eye(4),
-    offset=np.zeros(4),
-)
-result = GeometryGuidedSafeRecovery(coefficient_set, geometry).recover(threshold=0.0)
-print(result.accepted, result.coefficients)
-```
-
-### Runnable examples
-
-```bash
-pip install -e '.[test]'
-python examples/offline_certificate.py
-python examples/online_update.py
-```
-
-Both scripts use synthetic scores and geometry. They exercise the public calibration and update APIs and do not claim
-to reproduce a training run.
-
-### Training
+Train SetGRPO on your own prompts and checkpoint using the DAPO entrypoint.
 
 ```bash
 python -m recipe.dapo.main_dapo \
@@ -363,15 +329,26 @@ python -m recipe.dapo.main_dapo \
   trainer.n_gpus_per_node=4 trainer.nnodes=1
 ```
 
-Or use the environment wrapper, which preflights the grader endpoint before launching:
+**2. Run the offline certificate**
+
+Two shipped scripts exercise the calibration and recovery APIs on synthetic scores.
 
 ```bash
-MODEL_PATH=/path/to/model TRAIN_FILE=/path/to/train.parquet \
-STAGE2_API_KEY=sk-... \
-bash recipe/dapo/run_setgrpo_rubrichub_external_api.sh
+python examples/offline_certificate.py
+python examples/online_update.py
 ```
 
-See [`recipe/dapo/README.md`](recipe/dapo/README.md) for the full runtime requirements.
+**3. Freeze a calibration rule**
+
+Freeze the joint coefficient set and the risk-gated threshold into a JSON rule for deployment.
+
+```bash
+setgrpo-calibrate --calibration calib.jsonl --risk risk.jsonl --output rule.json
+```
+
+(Where `calib.jsonl` and `risk.jsonl` hold paired-score rows, and `--alpha`, `--beta`, `--gamma` set the coverage and
+risk targets. The external-API wrapper `recipe/dapo/run_setgrpo_rubrichub_external_api.sh` preflights the grader
+endpoint before launching; see [`recipe/dapo/README.md`](recipe/dapo/README.md) for the full runtime requirements.)
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📦 What Is Not Shipped
