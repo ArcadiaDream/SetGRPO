@@ -22,7 +22,7 @@ authors:
     given-names: Yupeng
 type: software
 license: Apache-2.0
-repository-code: "https://github.com/ArcadiaDream/SetGRPO"
+repository-code: "https://github.com/ArcadiaDream/SetGRPO-v2"
 year: 2026
 preferred-citation:
   type: article

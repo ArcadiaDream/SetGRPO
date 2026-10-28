@@ -24,7 +24,7 @@
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green.svg" alt="License"></a>
-  <a href="https://github.com/ArcadiaDream/SetGRPO/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/SetGRPO.svg?style=social" alt="Stars"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/SetGRPO-v2.svg?style=social" alt="Stars"></a>
 </p>
 
 ---
@@ -155,7 +155,7 @@ SetGRPO/
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/ArcadiaDream/SetGRPO.git
+git clone https://github.com/ArcadiaDream/SetGRPO-v2.git
 cd SetGRPO
 ```
 
@@ -265,7 +265,7 @@ conformal prediction and conformal risk control for the statistical guarantees.
 
 ## ✉️ Contact
 
-Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDream/SetGRPO/issues).
+Questions and bug reports are welcome via [Issues](https://github.com/ArcadiaDream/SetGRPO-v2/issues).
 
 ## 📝 Citation
 
@@ -300,8 +300,8 @@ Other works from our group:
 
 We welcome all forms of contributions. If you have a question, an idea, or find a bug:
 
-- Open an [Issue](https://github.com/ArcadiaDream/SetGRPO/issues) for discussions or bug reports.
-- Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO/pulls) to improve the codebase.
+- Open an [Issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) for discussions or bug reports.
+- Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO-v2/pulls) to improve the codebase.
 
 ## 📄 License
 
