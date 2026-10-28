@@ -215,13 +215,15 @@ SetGRPO/
 ├── 📁 setgrpo/                  # Framework-independent numerical core
 │   ├── 🎯 calibration.py        # Group normalization, coefficient sets, conformal radii
 │   ├── 📐 geometry.py           # Local policy geometry, projected response Jacobians
+│   ├── 🧮 jacobian.py           # Optional CountSketch gradient projection (needs PyTorch)
 │   ├── 🩹 recovery.py           # Support margins, safe anchors, geometry-guided recovery
 │   ├── 🛡️ risk.py              # Selective risk calibration and threshold selection
 │   ├── ♻️ online.py            # Framework-neutral online GRPO update construction
 │   ├── 🌡️ warmup.py            # Paired-score calibration, frozen artifacts
 │   ├── 📜 certificate.py        # Deploy-time certificates
 │   ├── 🏋️ training.py          # Minimal tensor-batch adapter
-│   └── 🗂️ data.py              # JSON-friendly certificate row helpers
+│   ├── 🗂️ data.py              # JSON-friendly certificate row helpers
+│   └── ⌨️ cli.py               # setgrpo-calibrate entry point
 ├── 📁 setgrpo_preflight/        # Startup and pre-training checks
 ├── 📁 setgrpo_sidecar/          # Policy-Jacobian service
 ├── 📁 recipe/dapo/              # Paper training entrypoint (Ray + FSDP + Verl)
@@ -237,38 +239,65 @@ SetGRPO/
 
 ## 🚀 Installation
 
-The package installs in stages, so you only pull the dependency set you actually need. The core is pure NumPy and
-SciPy, which keeps a calibration-only workflow installable on a laptop.
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/ArcadiaDream/SetGRPO-v2.git
 cd SetGRPO
 ```
 
+**2. Set up the environment**
+
+We recommend Conda to keep the training stack isolated. The numerical core alone runs on plain `pip` with Python 3.10
+or newer, so a calibration-only workflow stays installable on a laptop.
+
 ```bash
-pip install -e .                  # numerical core: numpy + scipy only
-pip install -e '.[training]'      # GPU integration
-pip install -e '.[verl]'          # full paper training runtime
+conda create -n setgrpo python=3.10
+conda activate setgrpo
 ```
 
-The core needs Python 3.10+, NumPy and SciPy. PyTorch is optional and only required for projected policy-Jacobian
-extraction or tensor-batch attachment.
+**3. Install the package**
+
+Pick the extras that match what you need to run:
+
+```bash
+pip install -e .                  # core only: NumPy + SciPy
+pip install -e '.[training]'      # adds torch, ray, hydra, pyarrow
+pip install -e '.[verl]'          # full paper runtime, adds vllm
+pip install -e '.[test]'          # pytest, for tests/
+```
+
+**4. Check the install**
+
+```bash
+setgrpo-calibrate --help
+```
+
+The command ships with `--calibration`, `--risk`, `--output`, and the risk parameters `--alpha`, `--beta`, `--gamma`.
+`setgrpo-certify` exists as well, and expects an application-specific rollout provider supplied from Python.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📂 Data Preparation
 
-This repository does not redistribute any dataset. A training run needs three things from the caller:
+This repository does not redistribute any dataset. A training run needs three inputs from the caller, and each one
+has a fixed place in the recipe.
 
-**1. Training prompts with rubrics.** A parquet file following the Verl RLHF dataset layout, containing the prompt
-field consumed by `data.train_files` and the rubric text used by the batched reward function. The paper trains on the
-RubricHub training set; arrange your own copy in the same schema.
+**Training prompts with rubrics**
 
-**2. A grading endpoint.** Either an OpenAI-compatible external API or a locally served judge. The wrapper reads
-`STAGE2_API_BASE_URL`, `STAGE2_API_MODEL`, and `STAGE2_API_KEY` from the environment and never stores credentials.
+A parquet file following the Verl RLHF dataset layout. It carries the prompt field consumed by `data.train_files` and
+the rubric text read by the batched reward function. The paper trains on the RubricHub training set; arrange your own
+copy in the same schema.
 
-**3. A local model checkpoint.** Passed as `actor_rollout_ref.model.path`, in the standard Hugging Face layout.
+**A grading endpoint**
 
-Directory layout used by the recipe:
+Either an OpenAI-compatible external API or a locally served judge. The wrapper reads `STAGE2_API_BASE_URL`,
+`STAGE2_API_MODEL`, and `STAGE2_API_KEY` from the environment and stores no credentials.
+
+**A local model checkpoint**
+
+Passed as `actor_rollout_ref.model.path`, in the standard Hugging Face layout.
+
+After preparing the three inputs, ensure the folder structure matches the following:
 
 ```
 SetGRPO/
