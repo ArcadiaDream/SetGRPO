@@ -111,13 +111,13 @@ to keep the policy update direction safe:
 ## 📊 Experiment Results
 
 <p align="center">
-  <img src="assets/results-main.png" alt="Main results on ten open-ended benchmarks" width="100%">
+  <img src="assets/table1-main-results.png" alt="Table 1: main results on ten downstream benchmarks" width="100%">
 </p>
+
 <p align="center">
-  <b>Table 1.</b> Same-backbone comparison against RubricHub on Qwen3-4B and Qwen3-14B, across ten open-ended
-  benchmarks spanning medical, writing, and instruction-following tasks. Bold marks the better score within each
-  backbone and metric.
+  <img src="assets/table2-same-backbone.png" alt="Table 2: same-backbone comparison between RubricHub and SetGRPO" width="100%">
 </p>
+
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📑 Table of Contents
