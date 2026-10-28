@@ -41,6 +41,8 @@
 - [✨ Key Features](#-key-features)
 - [🏗️ Architecture](#️-architecture)
 - [📊 Experiment Results](#-experiment-results)
+  - [Main results](#main-results)
+  - [Same-backbone comparison](#same-backbone-comparison)
   - [Training dynamics](#training-dynamics)
   - [Risk calibration](#risk-calibration)
   - [Ablation](#ablation)
@@ -139,9 +141,21 @@ Qwen3.5-4B, Qwen3.5-9B, and Llama 3.2-3B serve as backbones, compared against th
 training baselines: Rubric-based GRPO, RubricHub, and RuscaRL. Macro Avg. only aggregates the ten benchmarks and
 never enters training.
 
+### Main results
+
+SetGRPO attains the highest macro average on both Qwen families, at 60.26 on Qwen3.5-4B and 63.51 on Qwen3.5-9B.
+Against RubricHub the average gains across healthcare, writing, and instruction-following tasks are 1.22, 2.61, and
+0.96 points, and they persist across backbones.
+
 <p align="center">
   <img src="assets/table1-main-results.png" alt="Table 1: main results on ten downstream benchmarks" width="100%">
 </p>
+
+### Same-backbone comparison
+
+Holding the backbone fixed against RubricHub isolates the effect of the method itself: 57.56 against 56.06 on
+Qwen3-4B, and 60.59 against 59.12 on Qwen3-14B. The joint coefficient set and the execution threshold are calibrated
+separately for each backbone, so the gain does not come from backbone-specific tuning.
 
 <p align="center">
   <img src="assets/table2-same-backbone.png" alt="Table 2: same-backbone comparison between RubricHub and SetGRPO" width="100%">
