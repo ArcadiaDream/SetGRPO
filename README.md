@@ -481,23 +481,6 @@ paper 🥰. Your support is our greatest motivation!
       </span>
     </td>
   </tr>
-  <tr style="border:none;">
-    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
-      <img src="assets/proj-imagine.png" alt="IMAGINE" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
-      <b>IMAGINE (ICMR'26)</b><br>
-      <span style="font-size: 0.9em;">
-        <a href="https://arxiv.org/abs/2606.08144" target="_blank">Paper</a>
-      </span>
-    </td>
-    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;">
-      <img src="assets/proj-rankvr.png" alt="RankVR" style="height:65px; width:auto; border-radius:8px; margin-bottom:8px;"><br>
-      <b>RankVR (ICMR'26)</b><br>
-      <span style="font-size: 0.9em;">
-        <a href="https://arxiv.org/abs/2606.11689" target="_blank">Paper</a>
-      </span>
-    </td>
-    <td style="width:33%; border:none; vertical-align:top; padding-top:30px;"></td>
-  </tr>
 </table>
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
