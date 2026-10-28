@@ -110,6 +110,13 @@ to keep the policy update direction safe:
 
 ## 📊 Experiment Results
 
+Evaluation covers ten open-ended benchmarks across three domains: Medical (HealthBench, LLMEval-Med, MedQA, MedMCQA),
+Writing (WritingBench, Creative Writing v3), and Instruction Following (IFEval, IFBench, InfoBench, MulDimIF).
+Qwen3.5-4B, Qwen3.5-9B, and Llama 3.2-3B serve as backbones, compared against the untrained Base model and three
+training baselines: Rubric-based GRPO, RubricHub, and RuscaRL. Every method shares the same training data, 500
+optimization steps, `K = 8` rollouts of at most 4096 tokens per prompt, and the same Qwen3-32B rubric grader.
+Macro Avg. only aggregates the ten benchmarks and never enters training.
+
 <p align="center">
   <img src="assets/table1-main-results.png" alt="Table 1: main results on ten downstream benchmarks" width="100%">
 </p>
