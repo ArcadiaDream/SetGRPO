@@ -90,11 +90,12 @@ to keep the policy update direction safe:
   <img src="assets/framework.png" alt="Overview of SetGRPO" width="95%">
 </p>
 
-<!-- Figure caption and the four-step walkthrough are kept here, hidden from the rendered page.
 <p align="center">
   <b>Figure 2.</b> Overview of SetGRPO, which consists of (a) Joint Reward Set Calibration,
   (b) Geometry-Guided Safe Recovery, and (c) Selective Risk-Gated Optimization.
 </p>
+
+<!-- The four-step walkthrough is kept here, hidden from the rendered page.
 
 1. **Calibrate.** Paired scores from the same grader are normalized within each response group and turned into a joint
    coefficient set with a conformal radius.
