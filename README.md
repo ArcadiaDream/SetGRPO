@@ -69,6 +69,9 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 
 ## ✨ Key Features
 
+Our framework introduces three core modules to absorb the coefficient uncertainty induced by a stochastic grader and
+to keep the policy update direction safe:
+
 - 🔍 **Joint Reward Set Calibration** — builds a joint coefficient uncertainty set from paired reward observations,
   with a split-conformal radius that carries finite-sample marginal coverage.
 - 🔗 **Geometry-Guided Safe Recovery** — maps candidate coefficients into the current policy's local update geometry
@@ -86,6 +89,8 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 <p align="center">
   <img src="assets/framework.png" alt="Overview of SetGRPO" width="95%">
 </p>
+
+<!-- Figure caption and the four-step walkthrough are kept here, hidden from the rendered page.
 <p align="center">
   <b>Figure 2.</b> Overview of SetGRPO, which consists of (a) Joint Reward Set Calibration,
   (b) Geometry-Guided Safe Recovery, and (c) Selective Risk-Gated Optimization.
@@ -98,6 +103,8 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 3. **Gate.** A one-sided Clopper–Pearson bound over candidate thresholds yields a single global threshold
    (`τ_sel = 0.25` in the paper), targeting `β = 0.08` direction-reversal risk.
 4. **Optimize.** Only groups that pass the gate contribute their recovered coefficients to the original GRPO objective.
+-->
+
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📊 Experiment Results
