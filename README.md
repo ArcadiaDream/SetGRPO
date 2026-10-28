@@ -96,8 +96,8 @@ highest macro average among all compared training methods on both the Qwen3.5 an
 
 Paper first, code second — the release notes below are in reverse chronological order.
 
-- **[2026-10-29]** Training code, preflight tooling, and the Verl/FSDP recipe are public in this repository.
-- **[2026-10-27]** Paper released on arXiv: [2610.36807](https://arxiv.org/abs/2610.36807).
+- **[2026-10-29]** 🚀 We release the training code, preflight tooling, and the Verl/FSDP recipe of SetGRPO.
+- **[2026-10-27]** 📄 SetGRPO is available on arXiv: [arXiv:2610.36807](https://arxiv.org/abs/2610.36807).
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## ✨ Key Features
