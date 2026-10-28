@@ -208,43 +208,31 @@ the overhead buys a 4.75-point macro-average gain over GRPO at the same budget.
 
 ## 📂 Repository Structure
 
-Everything not marked `[third-party]` is first-party code. The tree is split by how much of the runtime you need:
-`[core]` depends only on NumPy and SciPy, `[train]` pulls in PyTorch and Verl, and `[tool]` is standalone scripting
-that talks to an external judge. Most readers only ever touch `setgrpo/`.
-
-| Tag | Meaning | Extra dependencies |
-| --- | --- | --- |
-| `[core]` | Numerical implementation of the three modules | NumPy, SciPy |
-| `[train]` | Ray/FSDP training stack used for the paper | PyTorch, Verl |
-| `[tool]` | Diagnostics and side services | none beyond the core |
-| `[third-party]` | Vendored upstream code | follows the training stack |
+Our codebase is highly modular. Here is a brief overview of the core files:
 
 ```
 SetGRPO/
-├── assets/                       # figures referenced by this README
-├── setgrpo/                      # [core] framework-independent numerical core
-│   ├── calibration.py            # group normalization, coefficient sets, conformal radii
-│   ├── geometry.py               # local policy geometry, projected response Jacobians
-│   ├── recovery.py               # support margins, safe anchors, geometry-guided recovery
-│   ├── risk.py                   # selective risk calibration and threshold selection
-│   ├── online.py                 # framework-neutral online GRPO update construction
-│   ├── warmup.py                 # paired-score calibration, frozen artifacts
-│   ├── certificate.py            # deploy-time certificates
-│   ├── training.py               # minimal tensor-batch adapter
-│   └── data.py                   # JSON-friendly certificate row helpers
-├── setgrpo_preflight/            # [tool] startup / pre-training checks and diagnostics
-├── setgrpo_sidecar/              # [tool] policy-Jacobian service
-├── scripts/                      # [tool] endpoint checks run before a training job
-├── recipe/dapo/                  # [train] paper training entrypoint (Ray + FSDP + Verl)
-├── verl/                         # [third-party] vendored Verl runtime
-├── eval/                         # [train] external-judge API client
-├── health_bench/                 # [train] batched reward function used in the paper
-├── examples/                     # synthetic offline / online walkthroughs
-└── tests/                        # core unit tests
+├── 📁 setgrpo/                  # Framework-independent numerical core
+│   ├── 🎯 calibration.py        # Group normalization, coefficient sets, conformal radii
+│   ├── 📐 geometry.py           # Local policy geometry, projected response Jacobians
+│   ├── 🩹 recovery.py           # Support margins, safe anchors, geometry-guided recovery
+│   ├── 🛡️ risk.py              # Selective risk calibration and threshold selection
+│   ├── ♻️ online.py            # Framework-neutral online GRPO update construction
+│   ├── 🌡️ warmup.py            # Paired-score calibration, frozen artifacts
+│   ├── 📜 certificate.py        # Deploy-time certificates
+│   ├── 🏋️ training.py          # Minimal tensor-batch adapter
+│   └── 🗂️ data.py              # JSON-friendly certificate row helpers
+├── 📁 setgrpo_preflight/        # Startup and pre-training checks
+├── 📁 setgrpo_sidecar/          # Policy-Jacobian service
+├── 📁 recipe/dapo/              # Paper training entrypoint (Ray + FSDP + Verl)
+├── 📁 health_bench/             # Batched reward function used in the paper
+├── 📁 eval/                     # External-judge API client
+├── 📁 scripts/                  # Grader endpoint checks before a job
+├── 📁 examples/                 # Synthetic offline / online walkthroughs
+├── 📁 tests/                    # Core unit tests
+├── 📁 verl/                     # Vendored Verl runtime
+└── 📁 assets/                   # Figures referenced by this README
 ```
-
-Two entry points matter in practice: `setgrpo/` if you want to call the calibration and recovery API from your own
-trainer, and `recipe/dapo/` if you want to reproduce the paper. The rest exists to keep those two honest.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🚀 Installation
