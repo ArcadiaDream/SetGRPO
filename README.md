@@ -49,7 +49,7 @@ geometry to recover the largest safe update, and admits a response group only wh
 keeps the direction-reversal risk under control. Under exchangeability the construction gives finite-sample marginal
 coverage for the joint coefficient set and simultaneous risk control across candidate thresholds.
 
-On ten open-ended benchmarks across three domains (Medical, Writing, Instruction Following), SetGRPO attains the
+On ten open-ended benchmarks across three domains (Medical, Writing, Instruction Following), **SetGRPO** attains the
 highest macro average among all compared training methods on both the Qwen3.5 and Llama3.2 model families.
 
 <p align="center">
