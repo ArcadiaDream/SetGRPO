@@ -12,12 +12,12 @@
   <a href="https://zivchen-ty.github.io/">Zhiwei Chen</a><sup>1</sup> &nbsp;·&nbsp;
   <a href="https://zhihfu.github.io/">Zhiheng Fu</a><sup>1</sup> &nbsp;·&nbsp;
   <a href="https://jinhe-bi.github.io/">Jinhe Bi</a><sup>2</sup> &nbsp;·&nbsp;
-  <a href="https://faculty.sdu.edu.cn/huyupeng1/zh_CN/index.htm">Yupeng Hu</a><sup>1,*</sup>
+  <a href="https://faculty.sdu.edu.cn/huyupeng1/zh_CN/index.htm">Yupeng Hu</a><sup>1,✉</sup>
 </p>
 
 <p align="center">
   <sup>1</sup>Shandong University &nbsp;&nbsp; <sup>2</sup>National University of Singapore<br>
-  <sup>†</sup>Project Leader &nbsp;&nbsp; <sup>*</sup>Corresponding Author
+  <sup>†</sup>Project Leader &nbsp;&nbsp; <sup>✉</sup>Corresponding Author
 </p>
 
 <p align="center">
