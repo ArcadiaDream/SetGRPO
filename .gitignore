@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 测试与类型检查缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# 密钥与本地配置（务必不要提交）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# 模型权重与训练产物
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+wandb/
+outputs/
+checkpoints/
+
+# 日志与临时文件
+*.log
+logs/
+tmp/
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

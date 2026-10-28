@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "SetGRPO: Calibrating Grader-Induced Policy Optimization"
+abstract: >-
+  Set-Valued Group Relative Policy Optimization (SetGRPO) keeps the original GRPO
+  objective and calibrates the within-group training coefficients as a joint
+  uncertainty set, recovers the largest direction-safe update under the current
+  policy geometry, and gates retained response groups with finite-sample risk
+  control.
+authors:
+  - family-names: Huang
+    given-names: Jiale
+  - family-names: Li
+    given-names: Zixu
+  - family-names: Chen
+    given-names: Zhiwei
+  - family-names: Fu
+    given-names: Zhiheng
+  - family-names: Bi
+    given-names: Jinhe
+  - family-names: Hu
+    given-names: Yupeng
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/ArcadiaDream/SetGRPO"
+year: 2026
+preferred-citation:
+  type: article
+  title: "SetGRPO: Calibrating Grader-Induced Policy Optimization"
+  authors:
+    - family-names: Huang
+      given-names: Jiale
+    - family-names: Li
+      given-names: Zixu
+    - family-names: Chen
+      given-names: Zhiwei
+    - family-names: Fu
+      given-names: Zhiheng
+    - family-names: Bi
+      given-names: Jinhe
+    - family-names: Hu
+      given-names: Yupeng
+  year: 2026
+  eprint: "2610.36807"
+  eprint-type: arXiv
+  url: "https://arxiv.org/abs/2610.36807"

@@ -1,0 +1,54 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  gen_batch_size: ${data.train_batch_size}
+
+reward_model:
+  reward_manager: dapo
+  overlong_buffer: 
+    enable: False # We try to avoid forgetting to set enable
+    len: 0
+    penalty_factor: 0.0
+    log: False
+
+algorithm:
+  setgrpo:
+    online:
+      enabled: false
+      provider_type: module
+      provider_path: null
+      provider_name: build_coefficients
+      certificate_path: null
+      rule_path: null
+      certificate_key: microbatch_id
+      grid_size: 257
+      variant: full
+      discard_rate: 0.0
+      projection_dim: 256
+      beta: 0.25
+      gamma: 0.25
+      allow_reward_proxy: false
+      warmup:
+        enabled: false
+        output_dir: setgrpo_warmup
+        alpha: 0.1
+        beta: 0.25
+        gamma: 0.25
+        # Warmup score covariance can be nearly singular for small rollout
+        # groups; keep the conformal radius finite and threshold selection
+        # usable instead of silently disabling regularization.
+        shape_shrinkage: 0.1
+        shape_condition_cap: 1000.0
+  filter_groups:
+    enable: False # We try to avoid forgetting to set enable
+    metric: null # acc / score / seq_reward / seq_final_reward / ...
+    max_num_gen_batches: 0 # Non-positive values mean no upper limit
+
+trainer:
+  project_name: verl-dapo

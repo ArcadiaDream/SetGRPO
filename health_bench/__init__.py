@@ -1,0 +1,1 @@
+"""Public reward adapter entrypoints."""
