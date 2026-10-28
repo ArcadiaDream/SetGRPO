@@ -360,7 +360,8 @@ launcher. Training requires a caller-provided model, a parquet dataset, and grad
 ## 🤝 Acknowledgements
 
 This implementation builds on [Verl](https://github.com/volcengine/verl) for the Ray/FSDP training runtime, and on
-conformal prediction and conformal risk control for the statistical guarantees.
+conformal prediction and conformal risk control for the statistical guarantees. The vendored subset under `verl/` is
+redistributed under the Apache License 2.0; see [`verl/NOTICE.md`](verl/NOTICE.md) for upstream attribution.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## ✉️ Contact
@@ -392,9 +393,6 @@ If you find this code useful, a ⭐ on the repository is appreciated.
 
 ## 🔗 Related Projects
 
-<!-- TODO: 补齐与 SetGRPO 相关的其他工作。此前的列表自其他项目仓库沿用，与本研究无关，已移除。 -->
-
-_待补充。_
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 🫡 Support & Contributing
