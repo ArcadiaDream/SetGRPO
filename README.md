@@ -34,6 +34,29 @@
 
 ---
 
+## 📑 Table of Contents
+
+- [📌 Introduction](#-introduction)
+- [📢 News](#-news)
+- [✨ Key Features](#-key-features)
+- [🏗️ Architecture](#️-architecture)
+- [📊 Experiment Results](#-experiment-results)
+  - [Training dynamics](#training-dynamics)
+  - [Risk calibration](#risk-calibration)
+  - [Ablation](#ablation)
+  - [Efficiency](#efficiency)
+- [📂 Repository Structure](#-repository-structure)
+- [🚀 Installation](#-installation)
+- [📂 Data Preparation](#-data-preparation)
+- [🏃 Quick Start](#-quick-start)
+- [📦 What Is Not Shipped](#-what-is-not-shipped)
+- [🤝 Acknowledgements](#-acknowledgements)
+- [✉️ Contact](#️-contact)
+- [📝 Citation](#-citation)
+- [🔗 Related Projects](#-related-projects)
+- [🫡 Support & Contributing](#-support--contributing)
+- [📄 License](#-license)
+
 ## 📌 Introduction
 
 Rubric-based reinforcement learning trains large language models on open-ended tasks through fine-grained grader
@@ -161,26 +184,6 @@ the overhead buys a 4.75-point macro-average gain over GRPO at the same budget.
   <img src="assets/table6-efficiency.png" alt="Table 6: efficiency comparison between GRPO and SetGRPO" width="100%">
 </p>
 
-<p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
-
-## 📑 Table of Contents
-
-- [📌 Introduction](#-introduction)
-- [📢 News](#-news)
-- [✨ Key Features](#-key-features)
-- [🏗️ Architecture](#️-architecture)
-- [📊 Experiment Results](#-experiment-results)
-- [📂 Repository Structure](#-repository-structure)
-- [🚀 Installation](#-installation)
-- [📂 Data Preparation](#-data-preparation)
-- [🏃 Quick Start](#-quick-start)
-- [📦 What Is Not Shipped](#-what-is-not-shipped)
-- [🤝 Acknowledgements](#-acknowledgements)
-- [✉️ Contact](#️-contact)
-- [📝 Citation](#-citation)
-- [🔗 Related Projects](#-related-projects)
-- [🫡 Support & Contributing](#-support--contributing)
-- [📄 License](#-license)
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📂 Repository Structure
