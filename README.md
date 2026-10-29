@@ -90,10 +90,6 @@ highest macro average among all compared training methods on both the Qwen3.5 an
   <img src="assets/intro-panel-a.svg" alt="Score disagreement propagates jointly" width="46%">
   <img src="assets/intro-panel-b.svg" alt="Policy geometry changes local update alignment" width="46%">
 </p>
-<p align="center">
-  <b>Figure 1.</b> (a) Score disagreement propagates jointly through within-group normalization.
-  (b) Policy geometry changes local update alignment.
-</p>
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📢 News
@@ -129,11 +125,6 @@ contribute to the GRPO objective.
 
 <p align="center">
   <img src="assets/framework.png" alt="Overview of SetGRPO" width="95%">
-</p>
-
-<p align="center">
-  <b>Figure 2.</b> Overview of SetGRPO, which consists of (a) Joint Reward Set Calibration,
-  (b) Geometry-Guided Safe Recovery, and (c) Selective Risk-Gated Optimization.
 </p>
 
 <!-- The four-step walkthrough is kept here, hidden from the rendered page.
