@@ -164,13 +164,6 @@ On Qwen3.5-9B the average gains over RubricHub across healthcare, writing, and i
 2.61, and 0.96 points, and the same pattern holds across backbones.
 
 <p align="center">
-  <b>Table 1.</b> Main results on ten downstream benchmarks. HB: HealthBench; LEM: LLMEval-Med; MQA: MedQA;
-  MCQA: MedMCQA; WB: WritingBench; CW: Creative Writing v3; IFE: IFEval; IFB: IFBench; IB: InfoBench; and
-  MIF: MulDimIF. Results report the mean across repeated runs, with absolute improvements over the corresponding
-  Base model in parentheses.
-</p>
-
-<p align="center">
   <img src="assets/table1-main-results.png" alt="Table 1: main results on ten downstream benchmarks" width="100%">
 </p>
 
@@ -179,11 +172,6 @@ On Qwen3.5-9B the average gains over RubricHub across healthcare, writing, and i
 Holding the backbone fixed against RubricHub isolates the effect of the method itself: 57.56 against 56.06 on
 Qwen3-4B, and 60.59 against 59.12 on Qwen3-14B. The joint coefficient set and the execution threshold are calibrated
 separately for each backbone, so the gain does not come from backbone-specific tuning.
-
-<p align="center">
-  <b>Table 2.</b> Same-backbone comparison between RubricHub and SetGRPO on Qwen3-4B and Qwen3-14B. RubricHub
-  results were reproduced by our implementation using its publicly available training procedure.
-</p>
 
 <p align="center">
   <img src="assets/table2-same-backbone.png" alt="Table 2: same-backbone comparison between RubricHub and SetGRPO" width="100%">
@@ -199,11 +187,6 @@ retained updates keep contributing to optimization.
   <img src="assets/fig3-training-dynamics.png" alt="Figure 3: training dynamics of SetGRPO" width="100%">
 </p>
 
-<p align="center">
-  <b>Figure 3.</b> Training dynamics of SetGRPO, including the reward obtained from the first score, policy entropy,
-  accepted-group ratio, and mean recovery ratio over the first 500 training steps.
-</p>
-
 ### Risk calibration
 
 Empirical direction-reversal risk and its one-sided Clopper–Pearson upper bound both decrease as the projection
@@ -213,19 +196,10 @@ threshold tightens. At the selected threshold the upper bound stays below the ta
   <img src="assets/fig4-risk-calibration.png" alt="Figure 4: risk calibration across candidate thresholds" width="72%">
 </p>
 
-<p align="center">
-  <b>Figure 4.</b> Risk calibration and retained updates at the selected threshold τ<sub>sel</sub>.
-</p>
-
 ### Ablation
 
 Every variant trails the full setting on Qwen3.5-4B. A matched random discard, which keeps the same number of groups,
 falls furthest behind — the gain comes from geometry-based screening rather than from issuing fewer updates.
-
-<p align="center">
-  <b>Table 5.</b> Ablation study of SetGRPO on Qwen3.5-4B. Δ denotes the change from Full SetGRPO in each metric's
-  native units; upward arrows indicate the preferred direction.
-</p>
 
 <p align="center">
   <img src="assets/table5-ablation.png" alt="Table 5: ablation study of SetGRPO on Qwen3.5-4B" width="100%">
@@ -236,10 +210,6 @@ falls furthest behind — the gain comes from geometry-based screening rather th
 The additional cost is a Jacobian pass plus a per-group recovery search: single-step time rises from 82 s to 103 s
 and cumulative GPU-hours from 22.8 to 28.6 (+25.4%), while rollout and grader time stay at 48 s and 18 s. In return
 the ten-benchmark macro average goes from 55.41 to 60.26 (+4.75).
-
-<p align="center">
-  <b>Table 6.</b> Efficiency comparison between GRPO and SetGRPO.
-</p>
 
 <p align="center">
   <img src="assets/table6-efficiency.png" alt="Table 6: efficiency comparison between GRPO and SetGRPO" width="100%">
