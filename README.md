@@ -26,9 +26,7 @@
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.1%2B-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green.svg" alt="License"></a>
-  <!-- Stars 徽章：定稿公开后换成最终仓库地址再启用
-  <a href="https://github.com/ArcadiaDream/REPO/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/REPO.svg?style=social" alt="Stars"></a>
-  -->
+  <a href="https://github.com/ArcadiaDream/SetGRPO/stargazers"><img src="https://img.shields.io/github/stars/ArcadiaDream/SetGRPO.svg?style=social" alt="Stars"></a>
 </p>
 
 <p align="center">
@@ -253,7 +251,7 @@ SetGRPO/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/ArcadiaDream/SetGRPO-v2.git
+git clone https://github.com/ArcadiaDream/SetGRPO.git
 cd SetGRPO
 ```
 
@@ -377,7 +375,7 @@ redistributed under the Apache License 2.0; see [`verl/NOTICE.md`](verl/NOTICE.m
 
 ## ✉️ Contact
 
-If you have any questions, feel free to open an [issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) or reach out
+If you have any questions, feel free to open an [issue](https://github.com/ArcadiaDream/SetGRPO/issues) or reach out
 to us at **lizixu.cs@gmail.com** ☺️
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
@@ -499,8 +497,8 @@ paper 🥰. Your support is our greatest motivation!
 
 We welcome all forms of contributions! If you have any questions, ideas, or find a bug, please feel free to:
 
-- Open an [Issue](https://github.com/ArcadiaDream/SetGRPO-v2/issues) for discussions or bug reports.
-- Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO-v2/pulls) to improve the codebase.
+- Open an [Issue](https://github.com/ArcadiaDream/SetGRPO/issues) for discussions or bug reports.
+- Submit a [Pull Request](https://github.com/ArcadiaDream/SetGRPO/pulls) to improve the codebase.
 <p align="left"><a href="#top"><b>⬆ Back to top</b></a></p>
 
 ## 📄 License
@@ -513,12 +511,12 @@ Apache-2.0. See [LICENSE](LICENSE).
 </p>
 
 <p align="center">
-  <a href="https://github.com/ArcadiaDream/SetGRPO-v2"><img src="https://img.shields.io/badge/%E2%AD%90_Star_US-000000?style=for-the-badge&logo=github&logoColor=00D9FF" alt="Star"></a>
-  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/issues"><img src="https://img.shields.io/badge/%F0%9F%90%9B_Report_Issues-000000?style=for-the-badge&logo=github&logoColor=FF6B6B" alt="Issues"></a>
-  <a href="https://github.com/ArcadiaDream/SetGRPO-v2/pulls"><img src="https://img.shields.io/badge/%F0%9F%A7%90_Pull_Requests-000000?style=for-the-badge&logo=github&logoColor=4ECDC4" alt="Pull Requests"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO"><img src="https://img.shields.io/badge/%E2%AD%90_Star_US-000000?style=for-the-badge&logo=github&logoColor=00D9FF" alt="Star"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO/issues"><img src="https://img.shields.io/badge/%F0%9F%90%9B_Report_Issues-000000?style=for-the-badge&logo=github&logoColor=FF6B6B" alt="Issues"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO/pulls"><img src="https://img.shields.io/badge/%F0%9F%A7%90_Pull_Requests-000000?style=for-the-badge&logo=github&logoColor=4ECDC4" alt="Pull Requests"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/ArcadiaDream/SetGRPO-v2"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=520&lines=Thank+you+for+visiting+SetGRPO!;Looking+forward+to+your+attention!" alt="SetGRPO"></a>
+  <a href="https://github.com/ArcadiaDream/SetGRPO"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=520&lines=Thank+you+for+visiting+SetGRPO!;Looking+forward+to+your+attention!" alt="SetGRPO"></a>
 </p>
 
