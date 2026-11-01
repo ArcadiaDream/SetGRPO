@@ -22,11 +22,10 @@ def test_recovery_returns_a_certified_update():
 
 def test_risk_selection_controls_reversal_rate():
     selector = SelectiveRiskGatedOptimization(beta_target=0.2, gamma=0.1)
-    result = selector.select(
-        [{"threshold": 0.1, "accepted": True, "reversed": False, "yield": 1.0}],
-        [0.1],
-    )
+    rows = [{"threshold": 0.1, "accepted": True, "reversed": False, "yield": 1.0} for _ in range(12)]
+    result = selector.select(rows, [0.1])
     assert result.selected_threshold == 0.1
+    assert result.threshold_rows[0]["upper_bound"] <= 0.2
 
 
 def test_conformal_radius_is_finite_when_rank_is_available():
